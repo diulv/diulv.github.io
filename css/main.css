@@ -1,0 +1,22 @@
+#container {
+	width: 80%;
+	margin: 0 auto;
+}
+#content {
+	float:right;
+	width: 80%;
+	background:#9c9;
+}
+#sidebar {
+	float:left;
+	width:20%;
+	background:#c9c;
+}
+
+ul#sidebar{
+	list-style-type: none;
+}
+
+h1 {
+	margin: 0 auto;
+}
