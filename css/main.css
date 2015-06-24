@@ -1,5 +1,9 @@
+body{
+	font-family: 'Georgia';
+}
+
 #container {
-	width: 80%;
+	width: 60%;
 	margin: 0 auto;
 }
 #content {
@@ -11,12 +15,61 @@
 	float:left;
 	width:20%;
 	background:#c9c;
+	text-align: right;
 }
 
-ul#sidebar{
-	list-style-type: none;
+	a:link{
+		text-decoration: none;
+	}
+
+	a:hover{
+		text-decoration: none;
+		color: blue;
+	}
+
+	a:visited{
+		text-decoration: none;
+		color: blue;
+	}
+
+	a:active{
+		text-decoration: none;
+		color: blue;
+	}
+
+	li{
+		list-style-type: none;
+		padding: .2em;
+	}
+
+	h1 {
+		font-family: Lucida Sans Typewriter;
+		text-align: center;
+	}
+
+#content-container {
+    width:100%;
+    text-align:center;
 }
 
-h1 {
-	text-align: center;
+#left {
+    float:left;
+    width:33%;
+    height: 20px;
+    background: #ff0000;
+}
+
+#center {
+    display: inline-block;
+    margin:0 auto;
+    width:33%;
+    height: 20px;
+    background: #00ff00;
+}
+
+#right {
+    float:right;
+    width:33%;
+    height: 20px;
+    background: #0000ff;
 }
