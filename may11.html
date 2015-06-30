@@ -13,15 +13,15 @@
 		SC.get('/users/23821858/tracks', function(tracks) {
 		  for (var i = 0; i < tracks.length; i++) {
 			console.log(tracks[i].title);
-			$('#player').html(tracks[i].title);
+			SC.oEmbed(tracks.permalink_url, document.getElementById('player'));
 			}
 		});
 		
-		$(document).ready(function() {
+		/*$(document).ready(function() {
 			SC.get('/tracks', function(track){
 				$('#player').html(track.title);
 			});
-		});
+		});*/
 		</script>
 	</head>
 	<body>
