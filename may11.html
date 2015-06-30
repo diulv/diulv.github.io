@@ -4,9 +4,21 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="./css/main.css">
 		<script src="//connect.soundcloud.com/sdk.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script>
 		SC.initialize({
 		  client_id: 'c8a5a21fcea896ed080a5d3e8a8451c7'
+		});
+		
+		SC.get('/users/23821858', function(playlist) {
+		  for (var i = 0; i < playlist.tracks.length; i++) {
+			console.log(playlist.tracks[i].length);
+		  }
+		});
+		
+		$(document).ready(function() {
+			SC.get('/tracks', function(track){
+				$('#player').html(track.title);
 		});
 		</script>
 	</head>
@@ -14,10 +26,7 @@
 		<div id="container">
 			<div id="content">
 				<div id="content-container">
-					<div id="putTheWidgetHere"></div>
-					<script type="text/JavaScript">
-					  SC.oEmbed("http://soundcloud.com/ielcla", {color: "ff0066"},  document.getElementById("putTheWidgetHere"));
-					</script>
+					<div id="player"></div>
 				</div>
 			</div>
 			
