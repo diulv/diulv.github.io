@@ -10,7 +10,7 @@
 		  client_id: 'c8a5a21fcea896ed080a5d3e8a8451c7'
 		});
 		
-		SC.get('/users/23821858', function(playlist) {
+		SC.get('/users/23821858/tracks', function(playlist) {
 		  for (var i = 0; i < playlist.tracks.length; i++) {
 			console.log(playlist.tracks[i].length);
 		  }
