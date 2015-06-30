@@ -13,7 +13,7 @@
 		SC.get('/users/23821858/tracks', function(tracks) {
 		  for (var i = 0; i < tracks.length; i++) {
 			console.log(tracks[i].title);
-		  }
+			$('#player').html(tracks[i].title);
 		});
 		
 		$(document).ready(function() {
