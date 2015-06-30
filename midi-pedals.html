@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="./css/main.css">
+	</head>
+	<body>
+		<div id="container">
+			<div id="content">
+				<h1>MIDI ORGAN PEDALS</h1>
+
+
+				<p>There's a bunch of tutorials [links to them] about MIDI keyboard pedals, with varying degrees of usefulness from 'sort of specific about details' to 'last updated in 1998'.  I couldn't find There's a lot of potential for this to be a good beginner project for someone new to Arduinos: there's simple circuitry, you get to know a bit about MIDI, and it's a tangible thing you can .</p>
+				<p>I thought I'd write up my process and delve a bit more into how the circuit works and a little overview of MIDI.</p>
+
+				<h2>My Resources:</h2>
+
+				<ul>
+				<li>1 Arduino (Could be an UNO, I used an older Duemilanove but virtually any duino will work).</li>
+				<li>1 Multimeter</li>
+				<li>1 Set of Organ Pedals (could be a bunch of switches)</li>
+				<li>Wire</li>
+				<li>Wire Cutters</li>
+				</ul>
+
+				<h2>SCHEMATIC</h2>
+
+				<p>I'm building a one octave synth, so we need just 13 switches from C to C.  Here's what it'll look like:</p>
+
+				<p>{pic}</p>
+
+				<p>Not bad!  This is about as easy as it gets.  We're going to set the voltage to be HIGH at the input so that when the switch is open the .  When the switch is pressed it's going to connect the input to ground, and the voltage will be LOW.</p>
+
+				<p>But that's a little hand-wavy right, what do you mean we 'set the voltage high'?  We type a couple lines of code in and tell the Arduino to make it high, but what's the Arduino really doing?  I think it's good to know how it's set.</p>
+
+				<h2>INTERNAL PULL-UP RESISTORS</h2>
+
+				<p>When we set the voltage high a la the lines of code we're using what's called a pull-up resistor to set the voltage.  There's a bunch of little resistors inside the Arduino, and we're just telling the Arduino to route the voltage through there</p>
+
+				<p>So what's R2?  You can think of that as a representation of all the Other Stuff in the Arduino.  There's a ton in there: LEDs, capacitors, resistors, transistors, diodes, you name it. But we're a pretty advanced society, and we've figured out how to measure the impedance is 'looking into' the Arduino.  So we know we can pretend there's a 10MΩ resistor there.</p>
+
+				<p>pic with values</p>
+
+				<p>Now let's think about the examples rewritten above.  When the switch is closed, we're making what's called a voltage divider. When two resistors are in series. </p>
+
+				<p>SWITCH WIRING DIAGRAM</p>
+
+				<p>Let's look at just one switch.  This is the basic configuration</p>
+
+				<p>low is on, high is off</p>
+
+				<h2>QUICK TEST</h2>
+
+				<p>Before we wire up everything, let's try just one switch.  Whatever switch you're using</p>
+
+				<p>I know, I know, I hate when I'm new to something and I found out I have to buy even more crap before .  But if you're planning on doing virtually anything with electronics you will need a multimeter, just a stupid cheap thing will do.</p>
+
+				<p>What we'll do is You want the ohmmeter function, with the Ω symbol.  </p>
+
+				<p>dals-test.ino test</p>
+
+				<h2>MIDI</h2>
+
+				<p>So what if we just sent the computer a message, something like 'play this note until I say stop', and then </p>
+
+				<h2>WHAT NOW</h2>
+
+				<p>The</p>
+
+
+
+			</div>
+			
+			<div id="sidebar">
+				<h1>dcw</h1>
+				<ul>
+					<li><a href="./index.html">about</a></li>
+					<li><a href="http://www.github.com/diulv">github</a></li>
+					<li><a href="./emag.html">three.js maxwell's equations</a></li>
+					<li><a href="./midi-pedals.html">midi organ pedals</a></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
+					

@@ -1,5 +1,9 @@
 body{
-	font-family: 'Georgia';
+	font-family: sans-serif;
+}
+
+h2{
+	text-align: center;
 }
 
 #container {
@@ -9,13 +13,12 @@ body{
 #content {
 	float:right;
 	width: 80%;
-	background:#9c9;
+	/*background:#9c9;*/
 }
 #sidebar {
 	float:left;
 	width:20%;
-	background:#c9c;
-	text-align: right;
+	/*background:#c9c;*/
 }
 
 	a:link{
