@@ -6,17 +6,15 @@ SC.initialize({
 	client_id: 'c8a5a21fcea896ed080a5d3e8a8451c7'
 });
 
-
-
 var songs = [];
 SC.get('https://soundcloud.com/ielcla/sets/may11tomay11/s-n89af', function(tracks) {
-	return tracks;
+	songs = tracks;
 });
+
+
 
 /*$(document).ready(function() {
 	SC.get('/tracks', function(track){
 		$('#player').html(track.title);
 	});
 });*/
-
-function getIndex(
