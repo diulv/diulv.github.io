@@ -5,24 +5,7 @@
 		<link rel="stylesheet" type="text/css" href="./css/main.css">
 		<script src="//connect.soundcloud.com/sdk.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<script>
-		SC.initialize({
-		  client_id: 'c8a5a21fcea896ed080a5d3e8a8451c7'
-		});
-		
-		SC.get('/users/23821858/tracks', function(tracks) {
-		  for (var i = 0; i < tracks.length; i++) {
-			console.log(tracks[i].title);
-			SC.oEmbed(tracks.permalink_url, document.getElementById('player'));
-			}
-		});
-		
-		/*$(document).ready(function() {
-			SC.get('/tracks', function(track){
-				$('#player').html(track.title);
-			});
-		});*/
-		</script>
+		<script src="may11.js"></script>
 	</head>
 	<body>
 		<div id="container">
